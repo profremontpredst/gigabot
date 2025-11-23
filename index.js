@@ -106,7 +106,7 @@ const BLACKLIST_UA = (process.env.BLACKLIST_UA || "python-requests,curl,headless
 
 // === КОНФИГ ДЛЯ ФРОНТОВ ===
 const CONFIGS = {
-  "https://professional73.ru": {
+  "https://quiz-cb.onrender.com": {
     GS_LEAD_URL: "https://script.google.com/macros/s/AKfycbw_3wTbgMxiY02mogtLV46mEfdI46y7VgMfISf-EZvnlMaMfUTshtkO8hHnlMrFQNKl/exec",
     GS_LOGS_URL: "https://script.google.com/macros/s/AKfycbzsbjIWAvLKDti36VwVKJNj8LEMuOnxVQiq0T-9Pup6ahPBCY5DQokj5RIhZeceHwY/exec",
     BITRIX_LEAD_URL: "https://b24-rlsdyj.bitrix24.ru/rest/6530/div0suxgif5x3lvu/crm.lead.add.json"
@@ -116,7 +116,7 @@ const CONFIGS = {
     GS_LOGS_URL: "https://script.google.com/macros/s/AKfycbynpXNZG4UW3SFHa2Xvkdcjg4aS9XZH0nnV0eD2kHzHTzkuP6pBvpDE7C1fvbLdKCVc/exec",
     BITRIX_LEAD_URL: "#"
 },
-"https://centrbfl-jw6f.onrender.com": {
+"https://professional73.ru": {
   GS_LEAD_URL: "https://script.google.com/macros/s/AKfycbzYkhWt7vsxdZjHG6xFI0Zk3ofxoK27zOwpRHGfak2DVXxAuk6Up-hRMR2bmSBQrPqo/exec",
   GS_LOGS_URL: "https://script.google.com/macros/s/1l5YmjdlYdOxeHH9e5JWTyRmUD0diisb3bGrqumBz5TA/exec",
   BITRIX_LEAD_URL: "https://b24-8a3xl3.bitrix24.ru/rest/105/fpgopt3zszeltqrc/crm.lead.add.json"
