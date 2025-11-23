@@ -106,7 +106,7 @@ const BLACKLIST_UA = (process.env.BLACKLIST_UA || "python-requests,curl,headless
 
 // === КОНФИГ ДЛЯ ФРОНТОВ ===
 const CONFIGS = {
-  "https://quiz-cb.onrender.com": {
+  "https://professional73.ru": {
     GS_LEAD_URL: "https://script.google.com/macros/s/AKfycbw_3wTbgMxiY02mogtLV46mEfdI46y7VgMfISf-EZvnlMaMfUTshtkO8hHnlMrFQNKl/exec",
     GS_LOGS_URL: "https://script.google.com/macros/s/AKfycbzsbjIWAvLKDti36VwVKJNj8LEMuOnxVQiq0T-9Pup6ahPBCY5DQokj5RIhZeceHwY/exec",
     BITRIX_LEAD_URL: "https://b24-rlsdyj.bitrix24.ru/rest/6530/div0suxgif5x3lvu/crm.lead.add.json"
