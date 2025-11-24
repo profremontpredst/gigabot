@@ -265,8 +265,9 @@ app.post("/quiz", async (req, res) => {
       phone = "", 
       honeypot = "",
       durationMs = 0,
-      frontend = "unknown"
-    } = req.body;
+      frontend = "unknown",
+      utm = {}
+    } = req.body;    
 
     // === ЧЕРНЫЕ СПИСКИ ===
     if (isBlacklisted(phone, ip, ua)) {
@@ -317,8 +318,9 @@ app.post("/quiz", async (req, res) => {
           phone,
           userId,
           comment: commentText,
-          source: "quiz"
-        })
+          source: "quiz",
+          utm
+      })      
       }).catch(err => console.warn("⚠️ GS lead error:", err.message));
 
       // Отправляем в Bitrix
@@ -330,7 +332,7 @@ app.post("/quiz", async (req, res) => {
             fields: {
               NAME: answers.name || "Не указано",
               PHONE: [{ VALUE: phone, VALUE_TYPE: "WORK" }],
-              COMMENTS: commentText,
+              COMMENTS: `${commentText}\nUTM: ${JSON.stringify(utm)}`,
               SOURCE_ID: "QUIZ"
             }
           })
