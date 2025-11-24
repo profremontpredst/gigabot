@@ -112,7 +112,7 @@ const CONFIGS = {
     BITRIX_LEAD_URL: "https://b24-rlsdyj.bitrix24.ru/rest/6530/div0suxgif5x3lvu/crm.lead.add.json"
   },
   "https://boldova-k.ru": {
-    GS_LEAD_URL: "https://script.google.com/macros/s/AKfycbzQYwZMCMPOB20k8bJmlQNLPV8qNCXGHgjBPkrFvNHj56iSzDc47btwB3Sw-JF1lwuB/exec",
+    GS_LEAD_URL: "https://script.google.com/macros/s/AKfycbxp7yTxo9C8gilFAky9rXQ6z4ft8-bKMq09AocW6xU48IT4MO2gwKHiMNtb_7i9n0WL/exec",
     GS_LOGS_URL: "https://script.google.com/macros/s/AKfycbynpXNZG4UW3SFHa2Xvkdcjg4aS9XZH0nnV0eD2kHzHTzkuP6pBvpDE7C1fvbLdKCVc/exec",
     BITRIX_LEAD_URL: "#"
 },
