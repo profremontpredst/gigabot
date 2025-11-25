@@ -114,7 +114,7 @@ const CONFIGS = {
   "https://boldova-k.ru": {
     GS_LEAD_URL: "https://script.google.com/macros/s/AKfycbxp7yTxo9C8gilFAky9rXQ6z4ft8-bKMq09AocW6xU48IT4MO2gwKHiMNtb_7i9n0WL/exec",
     GS_LOGS_URL: "https://script.google.com/macros/s/AKfycbynpXNZG4UW3SFHa2Xvkdcjg4aS9XZH0nnV0eD2kHzHTzkuP6pBvpDE7C1fvbLdKCVc/exec",
-    BITRIX_LEAD_URL: "#"
+    BITRIX_LEAD_URL: "https://pravovoy-resurs.bitrix24.ru/rest/189/5z0trwdmnxf0fq4g/crm.lead.add.json"
 },
 "https://professional73.ru": {
   GS_LEAD_URL: "https://script.google.com/macros/s/AKfycbzYkhWt7vsxdZjHG6xFI0Zk3ofxoK27zOwpRHGfak2DVXxAuk6Up-hRMR2bmSBQrPqo/exec",
@@ -330,6 +330,7 @@ app.post("/quiz", async (req, res) => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             fields: {
+              TITLE: "Лид с сайта",
               NAME: answers.name || "Не указано",
               PHONE: [{ VALUE: phone, VALUE_TYPE: "WORK" }],
               COMMENTS: `${commentText}\nUTM: ${JSON.stringify(utm)}`,
