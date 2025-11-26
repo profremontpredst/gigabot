@@ -100,7 +100,10 @@ const QUIZ_MIN_AVG_INTERVAL_MS = parseInt(process.env.QUIZ_MIN_AVG_INTERVAL_MS) 
 const QUIZ_DENY_THRESHOLD = parseInt(process.env.QUIZ_DENY_THRESHOLD) || 20;
 const QUIZ_ALLOW_THRESHOLD = parseInt(process.env.QUIZ_ALLOW_THRESHOLD) || 85;
 
-const BLACKLIST_PHONES = (process.env.BLACKLIST_PHONES || "").split(",").filter(Boolean);
+const BLACKLIST_PHONES = [
+  "+79000000000",
+  "+79001234567"
+];
 const BLACKLIST_IPS = (process.env.BLACKLIST_IPS || "").split(",").filter(Boolean);
 const BLACKLIST_UA = (process.env.BLACKLIST_UA || "python-requests,curl,headless").split(",").filter(Boolean);
 
