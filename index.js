@@ -20,6 +20,14 @@ if (!GIGACHAT_CLIENT_ID || !GIGACHAT_CLIENT_SECRET) {
   process.exit(1);
 }
 
+// === BLACKLIST USER IDS ===
+const BLACKLIST_USER_IDS = [
+  "user_bb6pbllp",
+  "user_2axsxs7j",
+  "user_td501s2j",
+  "user_2d9z7oel"
+];
+
 // === GIGACHAT AUTH ===
 async function getGigaChatToken() {
   try {
@@ -91,7 +99,7 @@ const SYSTEM_PROMPT_ANTIBOT = `
  "reason": "подробное объяснение с указанием конкретных аномалий"
 }
 
-Будь строгим к подозрительным паттернам!
+Будь строгим к подозрительным паттернах!
 `;
 
 // === КОНСТАНТЫ АНТИБОТА ===
@@ -271,6 +279,15 @@ app.post("/quiz", async (req, res) => {
       frontend = "unknown",
       utm = {}
     } = req.body;    
+
+    // === BLACKLIST USER ID ПРОВЕРКА (ДО ВСЕХ ЭВРИСТИК) ===
+    if (BLACKLIST_USER_IDS.includes(userId)) {
+      return res.json({
+        score: 0,
+        action: "deny",
+        reason: "blacklisted_userId"
+      });
+    }
 
     // === ЧЕРНЫЕ СПИСКИ ===
     if (isBlacklisted(phone, ip, ua)) {
